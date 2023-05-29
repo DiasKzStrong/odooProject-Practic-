@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="category_template_action" model="ir.actions.act_window">
+            <field name="name">Categorys</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hotel.roomcategory</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context"></field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new category
+                </p>
+            </field>
+    </record>
+
+    <menuitem id="menu_category" 
+    name="Category" 
+    action="category_template_action"
+     parent="menu_category_master" 
+    sequence="0"/>
+
+</odoo>
