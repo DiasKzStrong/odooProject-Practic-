@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo> 
+       <record id='view_hotel_category_services_form' model="ir.ui.view">
+    <field name='name'>hotel.category.services.form</field>
+    <field name='model'>hotel.category.services</field>
+    <field name="arch" type='xml'>
+        <form>
+        <sheet>
+        <group>
+            <group>
+                <field name="name"></field>
+            </group>
+        </group>
+        </sheet>
+        <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+        </div>
+        </form>
+    </field>
+    </record>
+
+    <record id="category_services_template_action" model="ir.actions.act_window">
+            <field name="name">Services that client used</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hotel.category.services</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context"></field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new service category
+                </p>
+            </field>
+    </record>
+
+
+    <menuitem id="menu_category_services" 
+    name="Category_Services" 
+    action="category_services_template_action"
+     parent="menu_services_master" 
+    sequence="0"/>
+
+
+
+</odoo>

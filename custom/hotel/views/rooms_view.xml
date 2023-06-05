@@ -2,6 +2,27 @@
 
 
 <odoo>
+    <record id="views_hotel_rooms_form" model="ir.ui.view">
+    <field name="name">hotel.room.form</field>
+    <field name="model">hotel.rooms</field>
+    <field name='arch' type="xml">
+        <form>
+        <sheet>
+        <group>
+            <field name='number'></field>
+            <field name='category'></field>
+            <field name='price_for_day'></field>
+        </group>
+        </sheet>
+        <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+        </div>
+        </form>
+    </field>
+    </record>
+
     <record id="views_hotel_rooms_tree" model="ir.ui.view">
     <field name="name">hotel.room.tree</field>
     <field name="model">hotel.rooms</field>
@@ -9,6 +30,7 @@
         <tree>
             <field name='number'></field>
             <field name='category'></field>
+            <field name='price_for_day'></field>
         </tree>
     </field>
     </record>

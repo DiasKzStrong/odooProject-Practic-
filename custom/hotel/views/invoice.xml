@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    
+    <record id='view_hotel_invoice_form' model="ir.ui.view">
+    <field name='name'>hotel.invoice.form</field>
+    <field name='model'>hotel.invoice</field>
+    <field name="arch" type='xml'>
+        <form>
+        <sheet>
+        <group>
+            <group>
+                <field name='total_price'></field>
+                <field name='month'></field>
+            </group>
+        </group>
+        </sheet>
+        <div class="oe_chatter">
+            <field name="message_follower_ids"/>
+            <field name="activity_ids"/>
+            <field name="message_ids"/>
+        </div>
+        </form>
+    </field>
+    </record>
+
+    <record id='view_hotel_invoice_tree' model="ir.ui.view">
+    <field name='name'>hotel.invoice.tree</field>
+    <field name='model'>hotel.invoice</field>
+    <field name="arch" type='xml'>
+        <tree>
+        <field name="total_price"></field>
+        <field name='month'></field>
+        </tree>
+    </field>
+    </record>
+
+    <record id="invoice_template_action" model="ir.actions.act_window">
+            <field name="name">Invoice</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hotel.invoice</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context"></field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Nothing
+                </p>
+            </field>
+    </record>
+
+    <menuitem id="menu_invoice" name="Invoice" parent="menu_invoice_master"  action="invoice_template_action" sequence="0"/>
+
+</odoo>

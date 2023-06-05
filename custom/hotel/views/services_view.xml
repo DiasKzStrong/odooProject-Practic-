@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="views_hotel_services_tree" model="ir.ui.view">
+    <field name="name">hotel.services.tree</field>
+    <field name="model">hotel.services</field>
+    <field name='arch' type="xml">
+        <tree>
+            <field name='name'></field>
+            <field name='services_category'></field>
+            <field name='price'></field>
+        </tree>
+    </field>
+    </record>
+
+
+    <record id="services_template_action" model="ir.actions.act_window">
+            <field name="name">Service</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hotel.services</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context"></field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new service
+                </p>
+            </field>
+    </record>
+
+
+    <menuitem id="menu_services" 
+    name="Service" 
+    action="services_template_action"
+     parent="menu_services_master" 
+    sequence="0"/>
+
+
+
+</odoo>

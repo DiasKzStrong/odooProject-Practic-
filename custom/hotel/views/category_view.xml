@@ -15,9 +15,9 @@
     </record>
 
     <menuitem id="menu_category" 
-    name="Category" 
+    name="Category of rooms" 
     action="category_template_action"
-     parent="menu_category_master" 
+     parent="menu_rooms_master" 
     sequence="0"/>
 
 </odoo>

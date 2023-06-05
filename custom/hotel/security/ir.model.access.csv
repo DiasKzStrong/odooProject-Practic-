@@ -5,4 +5,15 @@ access.hotel.room,access_hotel_room,hotel.model_hotel_rooms,base.group_user,1,1,
 
 access.hotel.client,access_hotel_client,hotel.model_hotel_clients,base.group_user,1,1,1,1
 
+access.hotel.services,access_hotel_services,hotel.model_hotel_services,base.group_user,1,1,1,1
 
+
+access.hotel.category.services,access_hotel_category_services,hotel.model_hotel_category_services,base.group_user,1,1,1,1
+
+access.hotel.clients.total,access_hotel_clients_total,hotel.model_hotel_clients_total,base.group_user,1,1,1,1
+
+access.hotel.clients.services,access_hotel_clients_services,hotel.model_hotel_clients_services,base.group_user,1,1,1,1
+
+access.hotel.clients.rooms,access_hotel_clients_rooms,hotel.model_hotel_clients_rooms,base.group_user,1,1,1,1
+
+access.hotel.invoice.rooms,access_hotel_invoice,hotel.model_hotel_invoice,base.group_user,1,1,1,1

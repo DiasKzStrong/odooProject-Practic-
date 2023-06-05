@@ -1,1 +1,1 @@
-from . import RoomCategory,Clients,Rooms
+from . import RoomCategory,Clients,Rooms,ClientServices,ClientTotal,CategoryServices,Services,ClientsRooms,Invoice

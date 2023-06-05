@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <menuitem id="menu_hotel_root" name="Hotel" sequence="0"/>
-    <menuitem id="menu_category_master" name="Category_Details" parent="menu_hotel_root" sequence="0"/>
     <menuitem id="menu_rooms_master" name="Rooms_Details" parent="menu_hotel_root" sequence="0"/>
     <menuitem id="menu_clients_master" name="Clients_Details" parent="menu_hotel_root" sequence="0"/>
+    <menuitem id='menu_services_master' name='Services' parent='menu_hotel_root' sequence='0'/>
+    <menuitem id='menu_invoice_master' name='Invoice' parent='menu_hotel_root' sequence='0'/>
 </odoo>
