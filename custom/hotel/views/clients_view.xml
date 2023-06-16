@@ -14,6 +14,9 @@
                 <field name="telephone_number"></field>
                 <field name="passport_number"></field>
                 <field name="sex"></field>
+                <field name='client_services'></field>
+                <field name='client_rooms'></field>
+                <field name='client_total'></field>
             </group>
         </group>
         </sheet>

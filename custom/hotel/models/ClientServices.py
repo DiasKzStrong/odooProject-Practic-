@@ -8,15 +8,16 @@ class ClientServices(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _d = datetime.timedelta(0)
     
+    
     client = fields.Many2one(comodel_name = 'hotel.clients')
     service = fields.Many2one(comodel_name = 'hotel.services')
     date = fields.Datetime(default=lambda self: datetime.datetime.now())
     quantity = fields.Integer(default = 1)
     paid = fields.Boolean(default=True)
     
+    
     @api.model
     def create(self,vals):
-        
         if vals.get('quantity') < 0:
             raise ValidationError("quantity can't be lower than 0")
         self._check_date(vals)

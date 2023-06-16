@@ -15,8 +15,6 @@ class MonthlyInvoice(models.Model):
     def _compute_total_price(self):
         for record in self:
             
-            print(record.month.month)
-            
             last_month = record.month
             last_month_start = last_month.replace(day=1)
             last_month_end = last_month_start + relativedelta(day=31)
@@ -29,8 +27,6 @@ class MonthlyInvoice(models.Model):
                 ('write_date', '>=', last_month_start),
                 ('write_date', '<=', last_month_end)
             ])
-            
-            print('total',total_prices)
-            
+           
             total_price = sum(total.total_price for total in total_prices)
             record.total_price = total_price

@@ -11,6 +11,9 @@ class Clients(models.Model):
     passport_number = fields.Char(string='passpost number',required = True)
     telephone_number = fields.Char(string='telephone number',required = True)
     sex = fields.Selection([('male','Male'),('female','Female')],required = True)
+    client_services = fields.One2many(comodel_name = 'hotel.clients.services',inverse_name = 'client')
+    client_rooms = fields.One2many(comodel_name = 'hotel.clients.rooms',inverse_name = 'client')
+    client_total = fields.One2many(comodel_name = 'hotel.clients.total',inverse_name = 'client')
     
    
        
